@@ -1,0 +1,20 @@
+.start{
+    padding-top: 80px;
+    min-height: 550px;
+    background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+
+    &__subtitle{
+        margin-top: 70px;
+        font-size: 42px;
+        letter-spacing: 1px;
+        text-align: center;
+        font-weight: 300;
+        color: $main-color;
+    }
+
+    &__button{
+        @include contact-btn;
+        width: 225px;
+        margin-top: 40px;
+    }
+}

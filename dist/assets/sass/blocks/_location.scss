@@ -1,0 +1,102 @@
+.location{
+    position: relative;
+    min-height: 580px;
+    padding-top: 80px;
+    min-width: 100vh;
+    background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+
+    &__title{
+        position: absolute;
+        margin-top: 80px;
+        font-size: 42px;
+        font-weight: 700;
+        color: $main-color;
+        text-align: center;
+    }
+
+    &__wrapper{
+        display: grid;
+        grid-template: minmax(580px,auto) / repeat(2, 50%) ;
+    }
+
+    &__location{
+        position: relative;
+        &_subtitle{
+                position: relative;
+                text-transform: uppercase;
+                margin: 270px 80px auto;
+                font-size: 30px;
+                line-height: 36px;
+                font-weight: 700;
+                color: #ffffff;
+                text-align: start;
+                z-index: 1;
+                &::after{
+                    content:'';
+                    position: absolute;
+                    background-color:#36b4d4;
+                    height: 165px;
+                    width: 165px;
+                    opacity: 0.5;
+                    left: -40px;
+                    top: -10px;
+                    z-index: -1;
+                }
+            }
+        &_descr{
+                position: absolute;
+                padding: 20px 80px 0 80px;
+                font-size: 18px;
+                line-height: 36px;
+                font-weight: 500;
+                color: #ffffff;
+                text-align: start;
+                z-index: 10;
+            }
+        
+    }
+    &__cloud{
+        position: relative;
+        &_object{
+            position: relative;
+            left: 80%;
+            top: -25%;
+        }
+        &_subtitle{
+                position: relative;
+                text-transform: uppercase;
+                margin: 270px 80px auto;
+                font-size: 30px;
+                line-height: 36px;
+                font-weight: 700;
+                color: #ffffff;
+                text-align: end;
+                z-index: 1;
+                &::after{
+                    content:'';
+                    position: absolute;
+                    background-color:#36b4d4;
+                    height: 165px;
+                    width: 165px;
+                    opacity: 0.5;
+                    right: -40px;
+                    top: -10px;
+                    z-index: -1;
+                }
+            }
+        &_descr{
+                position: absolute;
+                padding: 20px 80px 0 250px;
+                font-size: 18px;
+                line-height: 36px;
+                font-weight: 500;
+                color: #ffffff;
+                text-align: end;
+                z-index: 10;
+            }
+        }
+        
+    }
+    
+
+    

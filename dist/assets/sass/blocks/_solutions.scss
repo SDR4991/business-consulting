@@ -1,0 +1,52 @@
+.solutions{
+    min-height: 880px;
+    padding: 85px 0 75px 0;
+    background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+    text-shadow: 1px 1px 2px $hover-color;
+
+    &__title{
+        text-align: center;
+        font-size: 42px;
+        font-weight: 700;
+        color: #ffffff;
+    }
+    &__picture{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.accordion{
+    margin-top: 20px;
+        &__heading{
+            text-align: center;
+            color:$main-color;
+            font-size: 32px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            &:hover{
+                cursor:pointer;
+                color:$hover-color;
+            }
+            &:active{
+                transform: scale(97%);
+            }
+        }
+        &__block{
+            display: block;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+            color:$main-color;
+            border: 1px solid $main-color;
+            border-radius:10px;
+            box-shadow: 0px 15px 40px 0px #4286f4;
+        }
+
+        &__block p{
+            margin: 0;
+        }
+        &__active{
+            color:$hover-color;
+        }
+}
