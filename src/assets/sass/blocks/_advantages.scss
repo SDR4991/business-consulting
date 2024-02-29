@@ -1,8 +1,7 @@
 .advantages{
     min-height: 1200px;
     padding-top: 79px;
-    background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
-    text-shadow: 1px 1px 2px $hover-color;
+    background: $bg-color;
 
     &__title{
         font-size: 42px;

@@ -1,8 +1,7 @@
 .offers{
     padding: 80px 0 80px;
     min-height: 895px;
-    background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
-    text-shadow: 1px 1px 2px $hover-color;
+    background: $bg-color;
     &__img{
         display: flex;
         justify-content: center;

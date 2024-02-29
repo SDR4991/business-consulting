@@ -1,0 +1,62 @@
+.modal {
+z-index: 20;
+  position: fixed;
+  display: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2);
+    &__content{
+        position: fixed;
+        text-align: center;
+        max-width: 500px;
+        left: 50%;
+        top: 20%;
+        background-color: $main-color;
+        border-radius: 10px;
+        transform: translateX(-50%);
+        padding: 30px 40px 30px 40px;
+        box-shadow: 0px 10px 30px 0px $hover-color;
+    }
+    &__close{
+        position: absolute;
+        cursor: pointer;
+        top: -80px;
+        right: -24px;
+        font-size: 80px;
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        background: transparent;
+        color: $main-color;
+        border: none;
+    }
+    &__title{
+        color:$hover-color;
+        font-size: 42px;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+    &__form input {
+        border: 1px solid $hover-color;
+        border-radius: 50px;
+        background-color: whitesmoke;
+        padding: 24px;
+        margin-bottom: 24px;
+        width: 100%;
+        color: inherit;
+        text-align: center;
+        resize: none
+    }
+
+    &__button{
+        @include contact-btn;
+        width: 200px;
+    }
+}
+
+

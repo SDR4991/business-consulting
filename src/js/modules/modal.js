@@ -1,51 +1,39 @@
-/* const modal = () =>{
-    function openModal(modalSelector){
-        const modalWindow = document.querySelector(modalSelector);
-        modalWindow.classList.add('show');
-        modalWindow.classList.remove('hide');
-        document.body.style.overflow = 'hidden';
-    }
-    function closeModal(modalSelector){
-        const modalWindow = document.querySelector(modalSelector);
-        modalWindow.classList.add('hide');
-        modalWindow.classList.remove('show');
-        document.body.style.overflow = '';
-    }
+const modal = () =>{
 
-    function modal(triggerSelector,modalSelector){
-        const modalTrigger = document.querySelectorAll(triggerSelector),
-            modalWindow = document.querySelector(modalSelector);
-        
-        modalTrigger.forEach(btn =>{
-            btn.addEventListener('click',()=>openModal(modalSelector))
-        });
+    function openModal(triggerSelector,modalSelector,closeSelector){
+        const btns = document.querySelectorAll(triggerSelector),
+        modal = document.querySelector(modalSelector),
+        close = document.querySelectorAll(closeSelector);
 
-        modalWindow.addEventListener('click',(e)=>{
-            if(e.target === modalWindow || e.target.getAttribute('data-close')===''){
-                closeModal(modalSelector);
-            }
-        });
-
-        document.addEventListener('keydown',(e)=>{
-            if(e.code ==='Escape' && modalWindow.classList.contains('show')){
-                closeModal(modalSelector)
-            };
+        btns.forEach(btn =>{
+            btn.addEventListener('click',(e)=>{
+                if(e){
+                    e.preventDefault();
+                }
+                
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+                modal.classList.add('animate__animated','animate__fadeIn');
+            })
         })
 
-        function showModalByScroll (){
-            if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight - 1){
-                openModal(modalSelector);
-                window.removeEventListener('scroll', showModalByScroll)
+        modal.addEventListener('click',(e)=>{
+            if(e.target === modal){
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
             }
-        }
-    
-        window.addEventListener('scroll', showModalByScroll);
+        })
 
+        close.forEach(close=>{
+            close.addEventListener('click',()=>{
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            })
+        })
     }
 
-    openModal('.modal');
-    closeModal('.modal');
-    modal('[data-modal]','.modal');
+    openModal('[data-modal]','.modal','[data-close]');
+    
 }
 
-export default modal; */
+export default modal;

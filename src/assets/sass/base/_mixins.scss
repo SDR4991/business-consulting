@@ -10,4 +10,11 @@
     text-transform: uppercase;
     color: #fff;
     text-shadow: 1px 1px 2px $hover-color;
+    &:hover{
+        cursor:pointer;
+        color:$hover-color;
+    }
+    &:active{
+        transform: scale(97%);
+    }
 }
