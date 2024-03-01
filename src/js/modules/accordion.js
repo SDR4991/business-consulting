@@ -2,10 +2,6 @@ const accordion = (triggerSelector,blockSelector)=>{
     const triggers = document.querySelectorAll(triggerSelector),
         blocks = document.querySelectorAll(blockSelector);
 
-    blocks.forEach(modal =>{
-        modal.classList.add('animate__animated','animate__fadeInDown')
-    })
-
     function hideblocks(){
         blocks.forEach(modal =>{
             modal.style.display = 'none';
@@ -20,7 +16,9 @@ const accordion = (triggerSelector,blockSelector)=>{
                 })
                 hideblocks();
                 this.classList.add('active');
+                this.nextElementSibling.classList.add('animate__animated','animate__fadeInDown');
                 this.nextElementSibling.style.display='block';
+                this.nextElementSibling.style.setProperty('--animate-duration', '2s');
             }else{
                 this.classList.remove('active');
                 this.nextElementSibling.style.display ='none';

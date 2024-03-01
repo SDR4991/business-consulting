@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRENGI</title>
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <title>Consulting</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
@@ -87,13 +88,13 @@
                 <div class="col-lg-8 col-xs-10 main__menu">         
                     <a href="#">Main Page</a>
                 
-                    <a href="#">Modules</a>
+                    <a href="#offers">Benefits</a>
                 
-                    <a href="#">Directions</a>
+                    <a href="#solutions">Directions</a>
                 
-                    <a href="#">About Us</a>
+                    <a href="#advantages">Advantages</a>
                 
-                    <a href="#">Our responsibilities</a>
+                    <a href="#location">Options</a>
                 </div>      
             </div>
             <div class="row">
@@ -106,14 +107,14 @@
                 </div>
                 <div class="col-lg-5 col-xs-7">
                     <div class="main__cellphones">
-                        <img src="./assets/images/iphone-empty.png" alt="cellphones" class="main__cellphones_img">
+                        <img src="./assets/images/iphone-empty.png" alt="cellphones" class="main__cellphones_img" data-aos="fade-left" data-aos-duration="2000">
                     </div>  
                 </div>  
             </div>
         </div>
     </section> 
 
-    <section class="offers">
+    <section class="offers" id="offers">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
@@ -143,7 +144,7 @@
                 </img>
             </div>
 
-            <div class="row">
+            <div class="row" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
                 <div class="col-lg-4">
                     <div class="offers__img">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#ffffff" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm64 192c17.7 0 32 14.3 32 32v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V256c0-17.7 14.3-32 32-32zm64-64c0-17.7 14.3-32 32-32s32 14.3 32 32V352c0 17.7-14.3 32-32 32s-32-14.3-32-32V160zM320 288c17.7 0 32 14.3 32 32v32c0 17.7-14.3 32-32 32s-32-14.3-32-32V320c0-17.7 14.3-32 32-32z"/></svg>
@@ -167,11 +168,11 @@
         </div>
     </section>
 
-    <section class="solutions">
+    <section class="solutions" id="solutions">
         <div class="container">
             <div class="row ">
                 <div class="col-lg-12 ">
-                    <div class="solutions__picture">
+                    <div class="solutions__picture" data-aos="zoom-in" data-aos-duration="2000">
                         <img src="./assets/images/macbook-empty.png" alt="macbook" class="solution__picture_img">
                     </div>
                 </div>
@@ -208,7 +209,7 @@
         </div>
     </section>
 
-    <section class="advantages">
+    <section class="advantages" id="advantages">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -216,43 +217,55 @@
                 </div>
             </div>
             <div class="row">
-                    <div class="advantages__pic col-lg-6">
-                        <img src="./assets/images/advantages/clock.png" alt="clock" class="advantages__pic_img">
-                    </div>
-                    <div class="advantages__pic col-lg-6">
-                        <img src="./assets/images/advantages/robohand.png" alt="robohand" class="advantages__pic_img">
-                    </div>
-            </div>
-            <div class="row">
-                    <div class="advantages__pic col-lg-6">
-                        <img src="./assets/images/advantages/globus.png" alt="globus" class="advantages__pic_img">
-                    </div>
-                    <div class="advantages__pic col-lg-6">
-                        <img src="./assets/images/advantages/cellphone.png" alt="cellphone" class="advantages__pic_img">
-                    </div>
-            </div>
-            <div class="row">
                 <div class="advantages__pic col-lg-6">
-                    <img src="./assets/images/advantages/suite.png" alt="suite" class="advantages__pic_img">
+                    <img src="./assets/images/advantages/clock.png" alt="clock" class="advantages__pic_img">
+                    <div class="advantages__text">Help to save your time</div>
+                        
                 </div>
+
                 <div class="advantages__pic col-lg-6">
+                    <img src="./assets/images/advantages/robohand.png" alt="robohand" class="advantages__pic_img">
+                    <div class="advantages__text">Use of the modern technologies</div>
+                </div>
+            </div>
+            <div class="advantages__btn">
+                <button class="advantages__btn_load">Load More</button>
+            </div>
+            
+            <div class="row">
+                <div class="advantages__pic advantages__pic-hidden col-lg-6" >
+                    <img src="./assets/images/advantages/globus.png" alt="globus" class="advantages__pic_img">
+                    <div class="advantages__text">Working all around the world</div>
+                </div>
+                <div class="advantages__pic advantages__pic-hidden col-lg-6" >
+                    <img src="./assets/images/advantages/cellphone.png" alt="cellphone" class="advantages__pic_img">
+                    <div class="advantages__text">Full control inside your cellphone</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="advantages__pic advantages__pic-hidden col-lg-6" >
+                    <img src="./assets/images/advantages/suite.png" alt="suite" class="advantages__pic_img">
+                    <div class="advantages__text">Contact with your partner</div> 
+                </div>
+                <div class="advantages__pic advantages__pic-hidden col-lg-6" >
                     <img src="./assets/images/advantages/card.png" alt="card" class="advantages__pic_img">
+                    <div class="advantages__text">All payments online</div> 
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="location">
+    <section class="location" id="location">
         <div class="row">
             <h2 class="col-lg-12 location__title">Options for location of <br>your data</h2>
         </div>
         
         <div class="location__wrapper">
-            <div class="location__cloud">
+            <div class="location__cloud" data-aos="zoom-in-up" data-aos-duration="2000">
                 <div class="location__cloud_subtitle">Cloud storage</div>
                 <p class="location__cloud_descr">Cloud storage is a way of storing data remotely with our cloud provider. </p>
             </div>
-            <div class="location__location">
+            <div class="location__location" data-aos="zoom-in-up" data-aos-duration="2000">
                 <div class="location__location_subtitle">Hardware storage</div>
                 <p class="location__location_descr">Hardware storage is a storage in our data center.</p>
             </div>
@@ -302,16 +315,24 @@
 		<div class="modal__dialog">
 			<div class="modal__content">
                 <div data-close class="modal__close">&times;</div>
-                <h3 class="modal__title">We will call you back!</h3>
+                <h3 class="modal__title">We will contact you!</h3>
 				<form class="modal__form" action="#" method="POST">
-					<input required placeholder="Your Name" name="name" type="text" class="modal__input" required>
-					<input required placeholder="Your Number" name="phone" type="phone" class="modal__input" required>
+					<input required placeholder="John Smith" name="name" type="text" class="modal__input" required>
+					<input required placeholder="+_ (___) ___ __ __" name="phone" type="phone" class="modal__input" required>
 					<button class="modal__button">Submit</button>
 				</form>
 			</div>
 		</div>
 	</div>
 
+    <div class="scroll-up" id="scroll-up" hidden>
+        <a href="#" class="scroll-up__icon" id="up"><img src="./assets/images/icons/chevron-up-solid.svg" alt="up"></a>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

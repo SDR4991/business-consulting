@@ -14,6 +14,7 @@ const modal = () =>{
                 modal.style.display = 'block';
                 document.body.style.overflow = 'hidden';
                 modal.classList.add('animate__animated','animate__fadeIn');
+                modal.style.setProperty('--animate-duration', '1s');
             })
         })
 

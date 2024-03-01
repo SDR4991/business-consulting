@@ -1,0 +1,20 @@
+.scroll-up{
+    position: fixed;
+	height: 40px;
+	width: 40px;
+	right: 30px;
+	bottom: 60px;
+	outline: none;
+	user-select: none;
+    z-index: 10;
+	&__icon{
+        color: $main-color;
+		object-fit: contain;
+		text-decoration: none;
+		user-select: none;
+    }
+	&:active{
+        transform: translate(0, 0.1rem)
+    }
+}
+		

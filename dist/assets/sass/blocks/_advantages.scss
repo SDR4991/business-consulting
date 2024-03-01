@@ -1,5 +1,5 @@
 .advantages{
-    min-height: 1200px;
+    min-height: 100vh;
     padding-top: 79px;
     background: $bg-color;
 
@@ -12,16 +12,47 @@
     }
 
     &__pic{
+        position: relative;
         margin: 10px;
         width: 545px;
         height: 340px;
         cursor: pointer;
+        z-index: 1;
         &_img {
             object-fit:cover;
             width: 100%;
             height: 100%;
             border-radius: 10px;
-            box-shadow: 0px 10px 30px 0 $hover-color;
+            box-shadow: 0px 10px 30px 0 $hover-color;  
         }
     }
+
+    &__text{
+        display: none;
+        color:$main-color;
+        font-size: 28px;
+        position: absolute;
+        text-shadow: 1px 5px 3px black;
+        letter-spacing: 2px;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+    &__btn{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        margin-top: 20px;
+        &_load{
+            @include contact-btn;
+            width: 500px;
+        }   
+    }
+}
+
+.advantages__pic-hidden{
+    display: none;
 }
