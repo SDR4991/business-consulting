@@ -18,8 +18,14 @@ h2, h3 {
     margin-bottom: 0;
 }
 
+body{
+    background: $bg-color;
+}
+
 @import 'blocks/header';
 @import 'blocks/main';
+@import 'blocks/hamburger';
+@import 'blocks/overlay';
 @import 'blocks/offers';
 @import 'blocks/solutions';
 @import 'blocks/advantages';

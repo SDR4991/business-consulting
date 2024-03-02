@@ -128,6 +128,49 @@ const form = () => {
 
 /***/ }),
 
+/***/ "./src/js/modules/hamburger.js":
+/*!*************************************!*\
+  !*** ./src/js/modules/hamburger.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const hamburger = () => {
+  const overlay = document.getElementById('overlay');
+  const menuBars = document.getElementById('menu-bars');
+  const nav1 = document.getElementById('nav-1');
+  const nav2 = document.getElementById('nav-2');
+  const nav3 = document.getElementById('nav-3');
+  const nav4 = document.getElementById('nav-4');
+  const navItems = [nav1, nav2, nav3, nav4];
+  function navAnimation(direction1, direction2) {
+    navItems.forEach((nav, i) => {
+      nav.classList.replace(`slide-${direction1}-${i + 1}`, `slide-${direction2}-${i + 1}`);
+    });
+  }
+  function toggleNav() {
+    menuBars.classList.toggle('change');
+    overlay.classList.toggle('overlay-active');
+    if (overlay.classList.contains('overlay-active')) {
+      overlay.classList.replace('overlay-slide-left', 'overlay-slide-right');
+      navAnimation('out', 'in');
+    } else {
+      overlay.classList.replace('overlay-slide-right', 'overlay-slide-left');
+      navAnimation('in', 'out');
+    }
+  }
+  menuBars.addEventListener('click', toggleNav);
+  navItems.forEach(nav => {
+    nav.addEventListener('click', toggleNav);
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (hamburger);
+
+/***/ }),
+
 /***/ "./src/js/modules/inputMask.js":
 /*!*************************************!*\
   !*** ./src/js/modules/inputMask.js ***!
@@ -377,6 +420,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_scroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/scroll */ "./src/js/modules/scroll.js");
 /* harmony import */ var _modules_inputMask__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/inputMask */ "./src/js/modules/inputMask.js");
 /* harmony import */ var _modules_form__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/form */ "./src/js/modules/form.js");
+/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/hamburger */ "./src/js/modules/hamburger.js");
+
 
 
 
@@ -394,6 +439,7 @@ window.addEventListener('DOMContentLoaded', () => {
   (0,_modules_scroll__WEBPACK_IMPORTED_MODULE_4__["default"])();
   (0,_modules_inputMask__WEBPACK_IMPORTED_MODULE_5__["default"])('[name="name"]', '[name="phone"]');
   (0,_modules_form__WEBPACK_IMPORTED_MODULE_6__["default"])();
+  (0,_modules_hamburger__WEBPACK_IMPORTED_MODULE_7__["default"])();
 });
 })();
 

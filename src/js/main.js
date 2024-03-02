@@ -5,6 +5,7 @@ import loadMore from "./modules/loadMore";
 import scroll from "./modules/scroll";
 import inputMask from "./modules/inputMask";
 import form from "./modules/form";
+import hamburger from "./modules/hamburger";
 
 window.addEventListener('DOMContentLoaded',()=>{
     'use strict';
@@ -16,5 +17,6 @@ window.addEventListener('DOMContentLoaded',()=>{
     scroll();
     inputMask('[name="name"]','[name="phone"]');
     form();
+    hamburger();
 
 })

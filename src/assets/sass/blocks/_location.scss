@@ -2,7 +2,6 @@
     position: relative;
     min-height: 580px;
     padding-top: 80px;
-    background: $bg-color;
 
     &__title{
         position: absolute;
@@ -27,7 +26,7 @@
                 font-size: 30px;
                 line-height: 36px;
                 font-weight: 700;
-                color: #ffffff;
+                color: $main-color;
                 text-align: start;
                 z-index: 1;
                 &::after{

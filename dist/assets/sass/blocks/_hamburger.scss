@@ -1,0 +1,30 @@
+.container-hamburger {
+  display: none;
+  z-index: 10;
+  position: fixed;
+  top: 20px;
+  left: 10px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  }
+
+.hamburger1, .hamburger2, .hamburger3 {
+  width: 35px;
+  height: 5px;
+  z-index: 10;
+  background-color: $hover-color;
+  margin: 6px 0;
+  transition: 0.4s;
+  }
+
+.change .hamburger1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .hamburger2 {opacity: 0;}
+
+
+.change .hamburger3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
